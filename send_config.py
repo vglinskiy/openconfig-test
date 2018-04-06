@@ -5,7 +5,7 @@ from lxml import etree
 
 USER = 'admin'
 PASSWD = 'admin'
-PORT = 5533
+PORT = 8830
 HOST = 'localhost'
 
 
@@ -24,7 +24,7 @@ def main():
             netconf_response = mc.edit_config(target='running', config=myconfig, default_operation='merge')
             print netconf_response
         except Exception as err:
-            print err
+            print "Error: ", err
 
 
 if __name__ == '__main__':
