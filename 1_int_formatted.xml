@@ -1,0 +1,41 @@
+<config>
+    <interfaces xmlns="http://openconfig.net/yang/interfaces">
+        <interface>
+            <name>eth1/1</name>
+            <config>
+                <name>eth1/1</name>
+                <description>OpenConfig</description>
+                <type>ianaift:ethernetCsmacd</type>
+            </config>
+            <subinterfaces>
+                <subinterface>
+                    <index>0</index>
+                    <ipv4>
+                        <addresses>
+                            <address>
+                                <ip>172.16.1.0</ip>
+                                <config>
+                                    <ip>172.16.1.0</ip>
+                                    <prefix-length>31</prefix-length>
+                                </config>
+                            </address>
+                        </addresses>
+                    </ipv4>
+                </subinterface>
+            </subinterfaces>
+            <routed-vlan>
+                     <ipv4>
+                        <addresses>
+                            <address>
+                                <ip>172.16.1.0</ip>
+                                <config>
+                                    <ip>172.16.1.0</ip>
+                                    <prefix-length>31</prefix-length>
+                                </config>
+                            </address>
+                        </addresses>
+                    </ipv4>               
+            </routed-vlan>
+        </interface>
+    </interfaces>
+</config>
