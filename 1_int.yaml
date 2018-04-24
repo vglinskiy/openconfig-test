@@ -1,0 +1,18 @@
+---
+"openconfig-interfaces:interfaces":
+  interface:
+   - name: eth1/1
+     config:
+        name: eth1/1
+        type: ethernetCsmacd
+     subinterfaces:
+         subinterface:
+            - index: 0
+              openconfig-if-ip:ipv4:
+                addresses:
+                    address:
+                       - ip: 172.16.1.0
+                         config:
+                            ip: 172.16.1.0
+                            prefix-length: 31
+

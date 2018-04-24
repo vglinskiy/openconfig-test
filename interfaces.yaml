@@ -16,6 +16,9 @@
                             ip: 172.16.1.0
                             prefix-length: 31
    - name: "Ethernet2/1"
+     config:
+        name: eth2/1
+        type: ethernetCsmacd
      openconfig-if-ethernet:ethernet:
          openconfig-vlan:switched-vlan:
             config:
@@ -25,6 +28,9 @@
                 - 3801
                 - 3802
    - name: "Ethernet3/1"
+     config:
+        name: eth2/1
+        type: ethernetCsmacd
      openconfig-if-ethernet:ethernet:
          openconfig-vlan:switched-vlan:
             config:

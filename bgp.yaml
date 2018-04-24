@@ -1,0 +1,58 @@
+---
+"openconfig-bgp:bgp":
+  global:
+    config:
+       as: 12345
+       router-id: 1.1.1.1
+    dynamic-neighbor-prefixes:
+      dynamic-neighbor-prefix:
+            - prefix: 192.168.10.0/24
+              config:
+                  prefix: 192.168.10.0/24
+                  peer-group: hypervisors
+  neighbors: 
+     neighbor:
+       - neighbor-address: 10.10.10.10
+         config:
+           peer-as: 12345
+           peer-type: INTERNAL
+         route-reflector:
+            config:
+               route-reflector-client: True
+         apply-policy:
+              config:
+                import-policy:
+                  - imp_policy1
+                  - imp_policy2
+                export-policy:
+                  - exp_policy1
+                  - exp_policy2
+       - neighbor-address: 20.20.20.20
+         config:
+           peer-as: 54321
+           peer-type: EXTERNAL
+         route-reflector:
+            config:
+               route-reflector-client: False
+         afi-safis:
+          afi-safi:
+           - afi-safi-name: ipv4-unicast
+             ipv4-unicast:
+               config:
+                 send-default-route: False
+  peer-groups:
+    peer-group:
+     - peer-group-name: "hypervisors"
+       config:
+         peer-as: 12345
+         peer-type: INTERNAL
+       route-reflector:
+          config:
+            route-reflector-client: False
+       apply-policy:
+         config:
+            import-policy:
+              - imp_policy1
+            export-policy:
+              - exp_policy1
+

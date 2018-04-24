@@ -1,0 +1,16 @@
+---
+"openconfig-interfaces:interfaces":
+  interface:
+   - name: "Ethernet2/1"
+     config:
+        name: eth2/1
+        type: ethernetCsmacd
+     openconfig-if-ethernet:ethernet:
+         openconfig-vlan:switched-vlan:
+            config:
+              interface-mode: TRUNK
+              native-vlan: 3800
+              trunk-vlans:
+                - 3801
+                - 3802
+

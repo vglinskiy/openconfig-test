@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nc:config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:oc-eth="http://openconfig.net/yang/interfaces/ethernet" xmlns:oc-if="http://openconfig.net/yang/interfaces" xmlns:oc-vlan="http://openconfig.net/yang/vlan" xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type" xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces" xmlns:oc-ext="http://openconfig.net/yang/openconfig-ext" xmlns:oc-inet="http://openconfig.net/yang/types/inet" xmlns:oc-ip="http://openconfig.net/yang/interfaces/ip" xmlns:oc-lag="http://openconfig.net/yang/interfaces/aggregate" xmlns:oc-types="http://openconfig.net/yang/openconfig-types" xmlns:oc-vlan-types="http://openconfig.net/yang/vlan-types" xmlns:oc-yang="http://openconfig.net/yang/types/yang" xmlns:yang="urn:ietf:params:xml:ns:yang:ietf-yang-types">
+    <oc-if:interfaces>
+        <oc-if:interface>
+            <oc-if:name>Ethernet3/1</oc-if:name>
+            <oc-eth:ethernet>
+                <oc-vlan:switched-vlan>
+                    <oc-vlan:config>
+                        <oc-vlan:interface-mode>ACCESS</oc-vlan:interface-mode>
+                        <oc-vlan:access-vlan>3800</oc-vlan:access-vlan>
+                    </oc-vlan:config></oc-vlan:switched-vlan>
+            </oc-eth:ethernet>
+            <oc-if:config>
+                <oc-if:type>oc-if:ethernetCsmacd</oc-if:type>
+                <oc-if:name>eth3/1</oc-if:name>
+            </oc-if:config>
+        </oc-if:interface>
+    </oc-if:interfaces>
+</nc:config>

@@ -1,0 +1,12 @@
+---
+"openconfig-interfaces:interfaces":
+  interface:
+    - name: "Ethernet3/1"
+      config:
+        name: eth3/1
+        type: ethernetCsmacd
+      openconfig-if-ethernet:ethernet:
+         openconfig-vlan:switched-vlan:
+            config:
+              interface-mode: ACCESS
+              access-vlan: 3800  
